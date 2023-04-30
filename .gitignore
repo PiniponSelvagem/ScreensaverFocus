@@ -3,3 +3,4 @@
 /src/publish/
 /src/ScreensaverFocus/obj/
 /src/ScreensaverProfile/obj/
+*.user

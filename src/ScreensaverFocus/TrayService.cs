@@ -8,8 +8,6 @@ namespace ScreensaverFocus {
         private static readonly Screensaver screensaver = new Screensaver();
         private static readonly Mutex mutex = new Mutex(false, "ScreensaverFocusMutex");
 
-        private static readonly List<Process> pList = new List<Process>();
-
         private static readonly string Pause = "Pause";
         private static readonly string Resume = "Resume";
 
@@ -46,8 +44,6 @@ namespace ScreensaverFocus {
             // assign the ContextMenuStrip to the NotifyIcon control
             notifyIcon.ContextMenuStrip = contextMenuStrip;
 
-            mutex.WaitOne();
-            
             watcherStart.EventHandle += EventProcessStart;
             watcherStop.EventHandle += EventProcessStop;
         }
@@ -63,8 +59,8 @@ namespace ScreensaverFocus {
                     StartInfo = startInfo
                 };
                 try {
+                    mutex.WaitOne();   // ScreensaverProfile will try to get the mutex, but will lock it self.
                     p.Start();
-                    pList.Add(p);
                 }
                 catch (Exception) {
                     notifyIcon.Text = "Screensaver Focus";
@@ -82,14 +78,7 @@ namespace ScreensaverFocus {
 
         void EventProcessStop(object sender, string processName) {
             if (processName.Contains(screensaver.Name)) {
-                try {
-                    Process p = pList.First();
-                    p.Kill();
-                    pList.Remove(p);
-                }
-                catch (Exception) {
-                    // Abafador ;)
-                }
+                mutex.ReleaseMutex();   // ScreensaverProfile will continue and terminate it self.
             }
         }
 
@@ -106,15 +95,7 @@ namespace ScreensaverFocus {
                     watcherStart.EventHandle -= EventProcessStart;
                     watcherStop.EventHandle -= EventProcessStop;
 
-                    pList.ForEach(p => {
-                        try {
-                            p.Kill();
-                        }
-                        catch (Exception) {
-                            // Abafador ;)
-                        }
-                    });
-                    pList.Clear();
+                    mutex.ReleaseMutex();   // ScreensaverProfile will continue and terminate it self.
                 }
                 else {
                     item.Text = Pause;

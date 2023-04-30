@@ -10,6 +10,9 @@
     <DebugType>None</DebugType>
     <BaseOutputPath>..\output\</BaseOutputPath>
     <ApplicationIcon>resources\icon_profile.ico</ApplicationIcon>
+
+    <VersionPrefix>1.0.1</VersionPrefix>
+    <Authors>PiniponSelvagem</Authors>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

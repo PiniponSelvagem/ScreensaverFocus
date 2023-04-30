@@ -37,8 +37,8 @@ namespace ScreensaverProfile {
             catch(Exception) { }
             finally {
                 if (gotMutex) {
-                    // Parent process has been killed, so terminate the child process
-                    Process.GetCurrentProcess().Kill();
+                    // Parent process has been killed or screensaver has ended
+                    Close();
                 }
             }
         }
