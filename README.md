@@ -23,10 +23,10 @@ Youtube: https://www.youtube.com/watch?v=ydC8lk04h2Q
 ![iCue profile](https://raw.githubusercontent.com/PiniponSelvagem/ScreensaverFocus/master/wiki/images/icue_profile.png)
 
 # Setup
-Using your desired RGB software:
-1. Start 'ScreensaverFocus.exe'.
-2. Create or using an existing profile, add the EXE 'ScreensaverProfile.exe' to it.
-3. And thats it, xD
+1. Place both 'ScreensaverFocus.exe' and 'ScreensaverProfile.exe' in a desired folder.
+2. Start 'ScreensaverFocus.exe'.
+3. Using your desired RGB software, create or use an existing profile and add the EXE 'ScreensaverProfile.exe' to it.
+4. And thats it, xD
 
 ## NOTE:
 Currently, 'ScreensaverFocus' does not detect the modification of the screensaver settings, this means that if you change to a different screensaver, it won't detect it. In order for 'ScreensaverFocus' detect the new screensaver:
