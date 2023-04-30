@@ -18,9 +18,9 @@ Should support any software that auto switches profiles based on the focused win
 # Demo
 Youtube: https://www.youtube.com/watch?v=ydC8lk04h2Q
 
-![Context menu](https://raw.githubusercontent.com/PiniponSelvagem/ScreensaverFocus/main/wiki/images/ssf_context_menu.png)
+![Context menu](https://raw.githubusercontent.com/PiniponSelvagem/ScreensaverFocus/master/wiki/images/ssf_context_menu.png)
 
-![iCue profile](https://raw.githubusercontent.com/PiniponSelvagem/ScreensaverFocus/main/wiki/images/icue_profile.png)
+![iCue profile](https://raw.githubusercontent.com/PiniponSelvagem/ScreensaverFocus/master/wiki/images/icue_profile.png)
 
 # Setup
 Using your desired RGB software:
