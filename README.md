@@ -54,7 +54,7 @@ ScreensaverFocus.exe -u
 # FAQ
 Why does it require administrator privileges?
 - Adding a taskschedule. This is used to set up auto start on system boot.
-- Getting events of start/stop processes. This is used for the app get notifications whena  process starts and stops, in this case the Screensaver. Removing administrator priviliges could be done by using 'Process.GetProcesses()', but this would require a periodic wake up of the app which this app tries to avoid.
+- Getting events of start/stop processes. This is used for the app get notifications of when a process starts and stops, in this case the Screensaver. Removing administrator priviliges could be done by using 'Process.GetProcesses()', but this would require a periodic wake up of the app which this app tries to avoid.
 - Checking the selected screensaver from Windows Registry at:
 ```
     key: HKEY_CURRENT_USER\Control Panel\Desktop
