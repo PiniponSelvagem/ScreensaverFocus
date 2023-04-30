@@ -25,6 +25,7 @@ If applicable, add screenshots to help explain your problem.
 
 **Desktop (please complete the following information):**
  - OS: [e.g. Windows 10 Pro, Build 19045]
+ - Screensaver: [e.g. The Matrix Trilogy Screensaver]
  - RGB software: [e.g. Corsair iCUE, 4.3.3.138]
  - Version [e.g. 1.0.0]
 
