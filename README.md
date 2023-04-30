@@ -24,8 +24,9 @@ Youtube: https://www.youtube.com/watch?v=ydC8lk04h2Q
 
 # Setup
 Using your desired RGB software:
-1. Create or using an existing profile, add the EXE 'ScreensaverProfile.exe' to it.
-2. And thats it, xD
+1. Start 'ScreensaverFocus.exe'.
+2. Create or using an existing profile, add the EXE 'ScreensaverProfile.exe' to it.
+3. And thats it, xD
 
 ## NOTE:
 Currently, 'ScreensaverFocus' does not detect the modification of the screensaver settings, this means that if you change to a different screensaver, it won't detect it. In order for 'ScreensaverFocus' detect the new screensaver:
