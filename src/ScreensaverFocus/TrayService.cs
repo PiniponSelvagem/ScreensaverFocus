@@ -10,8 +10,8 @@ namespace ScreensaverFocus {
 
         private static readonly List<Process> pList = new List<Process>();
 
-        private static readonly string PAUSE = "Pause";
-        private static readonly string RESUME = "Resume";
+        private static readonly string Pause = "Pause";
+        private static readonly string Resume = "Resume";
 
         private static bool status = true;
         private static ProcessWatcherStart watcherStart = new ProcessWatcherStart();
@@ -36,7 +36,7 @@ namespace ScreensaverFocus {
             ContextMenuStrip contextMenuStrip = new ContextMenuStrip();
 
             ToolStripMenuItem itemUpdate = new ToolStripMenuItem("Update screensaver");
-            ToolStripMenuItem itemToggle = new ToolStripMenuItem(PAUSE);
+            ToolStripMenuItem itemToggle = new ToolStripMenuItem(Pause);
             ToolStripMenuItem itemExit = new ToolStripMenuItem("Exit");
             contextMenuStrip.Items.AddRange(new ToolStripItem[] { itemUpdate, itemToggle, itemExit });
             itemUpdate.Click += UpdateScreensaver;
@@ -101,7 +101,7 @@ namespace ScreensaverFocus {
             ToolStripMenuItem? item = sender as ToolStripMenuItem;
             if (item != null) {
                 if (status) {
-                    item.Text = RESUME;
+                    item.Text = Resume;
                     status = false;
                     watcherStart.EventHandle -= EventProcessStart;
                     watcherStop.EventHandle -= EventProcessStop;
@@ -117,7 +117,7 @@ namespace ScreensaverFocus {
                     pList.Clear();
                 }
                 else {
-                    item.Text = PAUSE;
+                    item.Text = Pause;
                     status = true;
                     watcherStart.EventHandle += EventProcessStart;
                     watcherStop.EventHandle += EventProcessStop;

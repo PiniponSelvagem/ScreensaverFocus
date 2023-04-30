@@ -9,8 +9,8 @@
 
     <DebugType>None</DebugType>
     <BaseOutputPath>..\output\</BaseOutputPath>
-    <PackageIcon></PackageIcon>
-    <ApplicationIcon>resources\icon_profile.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>resources\icon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -22,22 +22,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="resources\icon_profile.ico" />
+    <Content Include="resources\icon.ico" />
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Properties\Settings.Designer.cs">
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
+    <PackageReference Include="System.Management" Version="7.0.1" />
+    <PackageReference Include="TaskScheduler" Version="2.10.1" />
   </ItemGroup>
 
 </Project>
