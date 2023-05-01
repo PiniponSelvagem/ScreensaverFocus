@@ -29,17 +29,17 @@ namespace ScreensaverProfile {
         }
 
         private void OnShow(object sender, EventArgs e) {
-            bool gotMutex = true;
+            Mutex? mutex = null;
             try {
-                Mutex mutex = Mutex.OpenExisting("ScreensaverFocusMutex");
-                gotMutex = mutex.WaitOne();
+                mutex = Mutex.OpenExisting("ScreensaverFocusMutex");
+                mutex.WaitOne();
             } 
             catch(Exception) { }
             finally {
-                if (gotMutex) {
-                    // Parent process has been killed or screensaver has ended
-                    Close();
-                }
+                try {
+                    mutex?.ReleaseMutex();
+                } catch (Exception) { }
+                Close();
             }
         }
     }

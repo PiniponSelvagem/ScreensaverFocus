@@ -12,7 +12,7 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <ApplicationIcon>resources\icon.ico</ApplicationIcon>
 
-    <VersionPrefix>1.0.1</VersionPrefix>
+    <VersionPrefix>1.0.2</VersionPrefix>
     <Authors>PiniponSelvagem</Authors>
   </PropertyGroup>
 
