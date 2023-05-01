@@ -63,8 +63,8 @@ namespace ScreensaverFocus {
                     StartInfo = startInfo
                 };
                 try {
-                    p.Start();
                     pList.Add(p);
+                    p.Start();
                 }
                 catch (Exception) {
                     notifyIcon.Text = "Screensaver Focus";
